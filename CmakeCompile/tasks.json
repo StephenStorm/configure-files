@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceRoot}/build"
+    },
+    "tasks": [
+        {
+            "label": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-G",
+                "Unix Makefiles",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                ".."
+            ]
+        },
+        {
+            "label": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            // "group": {
+            //     "kind": "build",
+            //     "isDefault": true
+            // },
+            "type": "shell",
+            "command": "make -j4",
+            "args": []
+        }
+        
+    ]
+}
